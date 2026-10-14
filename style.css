@@ -1,0 +1,79 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #222;
+    color: white;
+}
+
+.controles { margin-bottom: 20px; }
+button { padding: 10px 20px; cursor: pointer; }
+
+.tabuleiro {
+    display: grid;
+    /* O tamanho da grade será injetado pelo JS (ex: 3x3, 4x4) */
+    gap: 2px;
+    background-color: #000;
+    border: 4px solid #fff;
+    width: 90vw;          /* Ocupa 90% da largura da tela do celular */
+    max-width: 400px;     /* Mas nunca cresce mais que 400px no computador */
+    aspect-ratio: 1 / 1;  /* Força a altura a ser exatamente igual à largura! */
+}
+
+.peca {
+    background-size: 400px 400px; /* Mesma largura/altura do tabuleiro */
+    cursor: pointer;
+    transition: transform 0.15s ease-in-out; /* Animação suave (opcional) */
+}
+
+/* Oculta a peça que representa o espaço vazio */
+.vazio {
+    background-image: none;
+    background-color: transparent;
+    cursor: default;
+}
+
+#preview-container {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#imagem-preview {
+    width: 150px;
+    height: 150px;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    object-fit: cover; /* Garante que a imagem preencha o quadrado sem distorcer */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5); /* Uma sombra leve para dar profundidade */
+}
+
+/* Estilos do Modal */
+.modal-oculto {
+    display: none; /* Fica invisível durante o jogo */
+}
+
+.modal-visivel {
+    display: flex;
+    position: fixed;
+    top: 0; left: 0; 
+    width: 100vw; height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro */
+    justify-content: center;
+    align-items: center;
+    z-index: 100; /* Fica acima das peças do jogo */
+}
+
+.modal-conteudo {
+    background-color: #222;
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    border: 2px solid #fff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+}
+
+.modal-conteudo h2 { 
+    margin-top: 0; 
+    color: #4CAF50; /* Um verde de sucesso */
+}

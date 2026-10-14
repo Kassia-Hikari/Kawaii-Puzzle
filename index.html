@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Slide Puzzle - Grafo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Slide Puzzle</h1>
+    
+    <div class="controles">
+        <button onclick="iniciarJogo(3)">8 Peças (3x3)</button>
+        <button onclick="iniciarJogo(4)">15 Peças (4x4)</button>
+        <button onclick="iniciarJogo(5)">24 Peças (5x5)</button>
+    </div>
+
+    <div id="painel" style="display: flex; gap: 20px; font-size: 1.2rem; margin-bottom: 15px;">
+        <div>Movimentos: <span id="contador">0</span></div>
+        <div>Tempo: <span id="cronometro">00:00</span></div>
+    </div>
+
+    <div id="preview-container">
+        <p style="margin: 0 0 5px 0; font-size: 0.9rem; color: #ccc;">Objetivo:</p>
+        <img id="imagem-preview" src="" alt="Imagem de referência">
+    </div>
+
+    <!-- O CSS Grid cuidará do formato do tabuleiro -->
+    <div id="tabuleiro" class="tabuleiro"></div>
+    <div id="modal-vitoria" class="modal-oculto">
+        <div class="modal-conteudo">
+            <h2>Woooow você é muito incrível! Resolveu a fofura S2</h2>
+            <p id="texto-vitoria"></p>
+            <button onclick="fecharModal()">Jogar Novamente</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
