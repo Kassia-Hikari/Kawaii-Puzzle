@@ -2,7 +2,7 @@ Slide Puzzle - Jogo de Grafo
 
 Kawaii Puzzle <3
 
-Um jogo clássico de Slide Puzzle desenvolvido do utilizando Vanilla JavaScript, HTML5 e CSS3.
+Um jogo clássico de Slide Puzzle desenvolvido utilizando Vanilla JavaScript, HTML5 e CSS3.
 
 Este projeto foi construído para aplicar conceitos de Teoria dos Grafos, onde cada configuração do tabuleiro representa um nó no grafo e os movimentos válidos representam as arestas.
 
